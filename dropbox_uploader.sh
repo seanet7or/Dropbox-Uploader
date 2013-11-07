@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # Dropbox Uploader
 #
@@ -700,7 +700,7 @@ function db_download_file
     fi
 
     #Checking if the file already exists
-    if [[ -f $FILE_DST && $SKIP_EXISTING_FILES == 1 ]]; then
+    if [[ -f "$FILE_DST" && $SKIP_EXISTING_FILES == 1 ]]; then
         print " > Skipping already existing file \"$FILE_DST\"\n"
         return
     fi
